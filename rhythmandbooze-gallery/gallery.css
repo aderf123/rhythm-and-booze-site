@@ -1,0 +1,230 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+.hero-logo {
+  position: relative;
+  z-index: 2100;
+  margin-top: -80px;
+  align-items: center;
+  animation: bounceLogo 1s infinite ease-in-out;
+}
+
+@keyframes bounceLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+/* ===== Header with Back and Contact ===== */
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.gallery-header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.gallery-header a:hover {
+  color: #e50914;
+}
+
+.back-home i {
+  font-size: 1.5rem;
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #111;
+  color: #fff;
+}
+
+.contact-section h2 {
+  margin-bottom: 1rem;
+  color: #e50914;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-icons a {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-icons a:hover {
+  color: #e50914;
+  transform: scale(1.2);
+}
+.logo {
+  color: #e50914;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #e50914;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+  background: url("images/bg1.jpg") center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* Gallery Grid */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
+  transform: scale(1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover {
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  border-top: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.contact-section h2 {
+  color: #e50914;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+.contact-icon:hover {
+  color: #e50914;
+  transform: scale(1.2);
+  text-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-icons {
+    gap: 1.5rem;
+  }
+  .contact-icon {
+    font-size: 1.7rem;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .nav-links {
+    display: none;
+  }
+}
