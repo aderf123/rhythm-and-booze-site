@@ -126,16 +126,15 @@ html {
 }
 
 
-.navbar, .nav-links {
+.nav-links {
   max-width: 100vw;  /* Prevent background from stretching */
   overflow-x: hidden;
-}
-
-.nav-links {
-  display: flex;
+   display: flex;
   list-style: none;
   gap: 25px;
 }
+
+
 
 .nav-links a {
   color: white;
